@@ -4,6 +4,9 @@
   "description": "test project for Web Development as a startup kit",
   "main": "index.js",
   "scripts": {
+    "prestart": "node buildScripts/startMessage",
+    "start": "npx nodemon buildScripts/srcServer.js",
+    "share": "npx lt --port 3001 --subdomain dpavlenko",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -17,8 +20,12 @@
   },
   "homepage": "https://github.com/orwanec/startup_kit#readme",
   "devDependencies": {
+    "chalk": "^2.4.2",
     "express": "^4.16.4",
     "nodemon": "^1.18.9",
     "open": "^0.0.5"
+  },
+  "dependencies": {
+    "localtunnel": "^1.9.1"
   }
 }
