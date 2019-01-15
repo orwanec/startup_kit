@@ -1,0 +1,22 @@
+{
+  "name": "startup_kit",
+  "version": "1.0.0",
+  "description": "test project for Web Development as a startup kit",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/orwanec/startup_kit.git"
+  },
+  "author": "Denys Pavlenko",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/orwanec/startup_kit/issues"
+  },
+  "homepage": "https://github.com/orwanec/startup_kit#readme",
+  "devDependencies": {
+    "express": "^4.14.0"
+  }
+}
