@@ -23,7 +23,10 @@
     "chalk": "^2.4.2",
     "express": "^4.16.4",
     "nodemon": "^1.18.9",
-    "open": "^0.0.5"
+    "numeral": "^2.0.6",
+    "open": "^0.0.5",
+    "webpack": "^4.28.4",
+    "webpack-dev-middleware": "^3.5.0"
   },
   "dependencies": {
     "localtunnel": "^1.9.1"
