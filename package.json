@@ -17,6 +17,8 @@
   },
   "homepage": "https://github.com/orwanec/startup_kit#readme",
   "devDependencies": {
-    "express": "^4.16.4"
+    "express": "^4.16.4",
+    "nodemon": "^1.18.9",
+    "open": "^0.0.5"
   }
 }
