@@ -21,10 +21,12 @@
   "homepage": "https://github.com/orwanec/startup_kit#readme",
   "devDependencies": {
     "chalk": "^2.4.2",
+    "css-loader": "^2.1.0",
     "express": "^4.16.4",
     "nodemon": "^1.18.9",
     "numeral": "^2.0.6",
     "open": "^0.0.5",
+    "style-loader": "^0.23.1",
     "webpack": "^4.28.4",
     "webpack-dev-middleware": "^3.5.0"
   },

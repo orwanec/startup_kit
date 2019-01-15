@@ -1,7 +1,7 @@
 const path = require('path');
 
 module.exports = {
-  //debug: true,
+  mode: 'development',
   devtool: 'inline-source-map',
  //noInfo: false,
   entry: [
@@ -24,7 +24,7 @@ module.exports = {
       {
         test: /\.css$/,
         use: {
-          loader: "css"
+          loader: 'css-loader'
         }
       }
     ]

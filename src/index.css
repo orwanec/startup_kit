@@ -1,0 +1,10 @@
+body {
+  font-family: "Arial Narrow";
+  background-color: black;
+  text-align: center;
+  color: white;
+}
+
+table th {
+  padding: 5px
+}
