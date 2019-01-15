@@ -1,8 +1,8 @@
-body {
+div {
   font-family: "Arial Narrow";
-  background-color: black;
+  background-color: #9cf4ff;
+  padding:10px;
   text-align: center;
-  color: white;
 }
 
 table th {
