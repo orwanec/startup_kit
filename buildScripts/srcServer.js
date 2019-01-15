@@ -4,6 +4,7 @@ const open = require('open');
 
 const webpack = require('webpack');
 const config = require('../webpack.config.dev');
+/* eslint-disable no-console */
 
 let port = 3001;
 let app = express();
