@@ -18,3 +18,4 @@ npx lt --port 3001 --subdomain dpavlenko
 * Use Browsersync to test on different user-agents
 * Use Express (http-server or live-server) as a DEV APP Server
 * For automation of the build purposes use Gulp (faster that Grunt) or npm scripts
+* Use debugger by pasting in js code to stop the browser on the desired place
