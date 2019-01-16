@@ -2,6 +2,12 @@
 just a test project for Web Development as a startup kit
 
 ##Running
+#### 0.
+Everything now inside the:
+```
+npm start
+```
+
 #### 1.
 Nodemon is a nice guy to automatically refresh the server:
 `
