@@ -10,7 +10,7 @@
     "lint": "npx esw webpack.config.* src buildScripts",
     "lint:watch": "npm run lint -- --watch",
     "share": "npx lt --port 3001 --subdomain dpavlenko",
-    "test": "npx mocha --reporter progress buildScripts/testSetup.js \"src/**/*.test.js\"",
+    "test": "mocha --reporter progress buildScripts/testSetup.js \"src/**/*.test.js\"",
     "test:watch": "npm run test -- --watch"
   },
   "repository": {
