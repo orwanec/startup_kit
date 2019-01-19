@@ -20,6 +20,7 @@ app.get('/', function(req, res){
   res.sendFile(path.join(__dirname, '../src/index.html'));
 });
 
+// Assuming this guy is just for production API
 app.get('/users', function(req, res){
   //Hard code to make it simple and that we should avoid in production
   res.json([

@@ -1,5 +1,8 @@
 //Seems that fetch is built in in a browser!!!
 //const fetch = require('node-fetch');
+const getBaseUrl = require('./baseUrl').getBaseUrl;
+
+const baseUrl = getBaseUrl();
 
 module.exports = {
   getUsers: function () {
@@ -8,7 +11,8 @@ module.exports = {
 };
 
 function get(url){
-  return fetch(url).then(onSuccess, onError);
+  console.log(baseUrl + " ! ...this URL is loaded along with ...! " + url);
+  return fetch(baseUrl + url).then(onSuccess, onError);
 }
 
 // Promise resolution is abstracted away
