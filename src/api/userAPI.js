@@ -7,12 +7,23 @@ const baseUrl = getBaseUrl();
 module.exports = {
   getUsers: function () {
     return get('users');
+  },
+  deleteUser(id) {
+    return del(`users/${id}`);
   }
 };
 
 function get(url){
   console.log(baseUrl + " ! ...this URL is loaded along with ...! " + url);
   return fetch(baseUrl + url).then(onSuccess, onError);
+}
+
+function del(url) {
+  const request = new Request(baseUrl + url, {
+    method: 'DELETE'
+  });
+
+  return fetch(request).then(onSuccess, onError);
 }
 
 // Promise resolution is abstracted away
