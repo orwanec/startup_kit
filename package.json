@@ -55,6 +55,7 @@
   },
   "dependencies": {
     "compression": "^1.7.3",
-    "localtunnel": "^1.9.1"
+    "localtunnel": "^1.9.1",
+    "whatwg-fetch": "^3.0.0"
   }
 }

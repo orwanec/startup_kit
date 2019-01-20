@@ -7,18 +7,35 @@ module.exports = {
   mode: 'production',
   devtool: 'source-map',
  //noInfo: false,
-  entry: [
-    path.resolve(__dirname, 'src/index')
-  ],
+  entry: {
+    vendor: path.resolve(__dirname, 'src/vendor'),
+    main: path.resolve(__dirname, 'src/index')
+  },
   target: 'web',
+  //output after applpying the webpack
   output: {
     path: path.resolve(__dirname, 'dist'),
     publicPath: '/',
-    filename: 'bundle.js'
+    filename: '[name].js'
   },
   optimization: {
     // Minify JS. But with enabled - it will not create a bundle.js.map
     //minimizer: [new TerserPlugin()]
+    splitChunks: {
+      // chunk ~ aka. bundle, so we are splitting bundle into smaller chunks
+      chunks: "all",
+      cacheGroups: {
+        vendor: {
+          test: /[\\/]node_modules[\\/]/,
+          priority: 0
+        },
+        default: {
+          minChunks: 2,
+          priority: -20,
+          reuseExistingChunk: true
+        }
+      }
+    }
   },
   plugins: [
     // Create HTML file that includes reference to bundled JS
