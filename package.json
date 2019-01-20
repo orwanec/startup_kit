@@ -14,7 +14,11 @@
     "test:watch": "npm run test -- --watch",
     "generate-mock-data": "node buildScripts/generateMockData",
     "prestart-mockapi": "npm run generate-mock-data",
-    "start-mockapi": "npx json-server --watch src/api/db.json --port 3002"
+    "start-mockapi": "npx json-server --watch src/api/db.json --port 3002",
+    "clean-dist": "rimraf ./dist && mkdir dist",
+    "prebuild": "npx npm-run-all clean-dist test lint",
+    "build": "node buildScripts/build.js",
+    "postbuild": "node buildScripts/distServer.js"
   },
   "repository": {
     "type": "git",
@@ -45,6 +49,7 @@
     "numeral": "^2.0.6",
     "open": "^0.0.5",
     "style-loader": "^0.23.1",
+    "terser-webpack-plugin": "^1.2.1",
     "webpack": "^4.28.4",
     "webpack-dev-middleware": "^3.5.0"
   },

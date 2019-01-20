@@ -7,6 +7,13 @@ Everything now inside the:
 ```
 npm start
 ```
+*Note 1. it uses a real API now by accessing http://localhost:3001/, to get a mock API you need to
+set a query: http://localhost:3001/?useMockApi=true. It is easy way to switch between Mock API and
+Production API.*
+*Node 2. to rin in prod use the following (prebuild and postbuild will run automatically):*
+``
+npm run build
+``
 
 #### 1.
 Nodemon is a nice guy to automatically refresh the server:
