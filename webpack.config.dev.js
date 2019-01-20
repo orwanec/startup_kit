@@ -1,5 +1,6 @@
 const path = require('path');
-//const HtmlWebpackPlugin = require('html-webpack-plugin');
+// html-webpack-plugin is used to reference bundled assets in index.html
+const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
   mode: 'development',
@@ -14,7 +15,13 @@ module.exports = {
     publicPath: '/',
     filename: 'bundle.js'
   },
-  plugins: [],
+  plugins: [
+    // Create HTML file that includes reference to bundled JS
+    new HtmlWebpackPlugin({
+      template: 'src/index.html',
+      inject: true
+    })
+  ],
   module: {
     rules: [
       {
