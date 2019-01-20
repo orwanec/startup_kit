@@ -16,7 +16,7 @@ module.exports = {
   output: {
     path: path.resolve(__dirname, 'dist'),
     publicPath: '/',
-    filename: '[name].js'
+    filename: '[name].[chunkhash].bundle.js'
   },
   optimization: {
     // Minify JS. But with enabled - it will not create a bundle.js.map
