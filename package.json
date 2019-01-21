@@ -18,7 +18,8 @@
     "clean-dist": "rimraf ./dist && mkdir dist",
     "prebuild": "npx npm-run-all clean-dist test lint",
     "build": "node buildScripts/build.js",
-    "postbuild": "node buildScripts/distServer.js"
+    "postbuild": "node buildScripts/distServer.js",
+    "deploy": "npx surge ./dist"
   },
   "repository": {
     "type": "git",
@@ -57,6 +58,7 @@
   "dependencies": {
     "compression": "^1.7.3",
     "localtunnel": "^1.9.1",
+    "surge": "^0.20.1",
     "whatwg-fetch": "^3.0.0"
   }
 }

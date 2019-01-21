@@ -32,3 +32,4 @@ npx lt --port 3001 --subdomain dpavlenko
 * Use Express (http-server or live-server) as a DEV APP Server
 * For automation of the build purposes use Gulp (faster that Grunt) or npm scripts
 * Use debugger by pasting in js code to stop the browser on the desired place
+* Added surge to deploy static! files to production via npn run deploy. Login: gmail, pass is 82**3***
