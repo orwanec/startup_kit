@@ -55,7 +55,10 @@ module.exports = {
         minifyCss: true,
         minifyURLs: true
       },
-      inject: true
+      inject: true,
+      // Properties defined here are available in index.html
+      // using htmlWebpackPlugin.options.varName
+      trackJSToken: '7a2c87ece5b74546a7775b028de9480b'
     }),
     new ExtractTextPlugin("styles.[chunkhash].css"),
   ],
