@@ -2,6 +2,8 @@ const path = require('path');
 // html-webpack-plugin is used to reference bundled assets in index.html
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 //const TerserPlugin = require('terser-webpack-plugin');
+// to extract CSS from the bundle into a separate chunk
+const ExtractTextPlugin = require("extract-text-webpack-plugin");
 
 module.exports = {
   mode: 'production',
@@ -54,8 +56,8 @@ module.exports = {
         minifyURLs: true
       },
       inject: true
-    })
-    // Outdated in a new webpack
+    }),
+    new ExtractTextPlugin("styles.[chunkhash].css"),
   ],
   module: {
     rules: [
@@ -66,7 +68,10 @@ module.exports = {
       },
       {
         test: /\.css$/,
-        use:['style-loader','css-loader']
+        use: ExtractTextPlugin.extract({
+          fallback: "style-loader",
+          use: "css-loader"
+        })
       }
     ]
   }
