@@ -17,7 +17,7 @@
     "start-mockapi": "npx json-server --watch src/api/db.json --port 3002",
     "clean-dist": "rimraf ./dist && mkdir dist",
     "prebuild": "npx npm-run-all clean-dist test lint",
-    "build": "node buildScripts/build.js",
+    "build": "npx nf buildScripts/build.js",
     "postbuild": "node buildScripts/distServer.js",
     "deploy": "npx surge ./dist"
   },
@@ -41,6 +41,7 @@
     "express": "^4.16.4",
     "extract-text-webpack-plugin": "^4.0.0-beta.0",
     "faker": "^4.1.0",
+    "foreman": "^3.0.1",
     "html-webpack-plugin": "^3.2.0",
     "jsdom": "^13.1.0",
     "json-schema-faker": "^0.5.0-rc16",

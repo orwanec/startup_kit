@@ -3,9 +3,9 @@ just a test project for Web Development as a startup kit
 
 ##Running
 #### 0.
-Everything now inside the:
+Everything to run the DEV mode is now inside the:
 ```
-npm start
+npx nf start
 ```
 *Note 1. it uses a real API now by accessing http://localhost:3001/, to get a mock API you need to
 set a query: http://localhost:3001/?useMockApi=true. It is easy way to switch between Mock API and
@@ -33,3 +33,4 @@ npx lt --port 3001 --subdomain dpavlenko
 * For automation of the build purposes use Gulp (faster that Grunt) or npm scripts
 * Use debugger by pasting in js code to stop the browser on the desired place
 * Added surge to deploy static! files to production via npn run deploy. Login: gmail, pass is 82**3***
+* nf stands for foreman that will load the env variables before running npm start
